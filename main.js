@@ -13,6 +13,9 @@ app.use(express.json());
 
 // routes
 app.use('/api/trips', require('./controller/trips'));
+app.get('/', (req, res)=>{
+    res.send('Hello World');
+});
 
 
 connectDb().then(()=>{
